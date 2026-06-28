@@ -428,6 +428,8 @@
 
   /* ── PRINT ── */
   @media print {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .section, .header, .col-main, .col-side, .card, .page { opacity: 1 !important; transform: none !important; }
     body { background: #fff; color: #111; font-size: 13px; }
     .glow-tl, .glow-br, body::before { display: none; }
     .card { background: #fdf4ee; border-color: #f0c090; box-shadow: none; }
@@ -437,6 +439,7 @@
     .title-line { color: #CC4400; }
     .tl-title, .job-title { color: #111; }
     .tl-sub, .about-text { color: #333; }
+    .soft { color: #444; }
     .dot.on { background: #CC4400; box-shadow: none; }
     .dot.off { background: #ddd; }
     .page { padding: 16px 20px; }
