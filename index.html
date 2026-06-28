@@ -6,18 +6,17 @@
 <title>Резюме — Системный администратор · Александр Литвиненко</title>
 <style>
   :root {
-    --bg:      #0f1623;
-    --bg2:     #151e2e;
-    --bg3:     #1a2840;
-    --glass:   rgba(255,255,255,0.035);
-    --border:  rgba(56,139,253,0.16);
-    --accent:  #3B82F6;
-    --accent2: #60A5FA;
-    --dim:     #1D4ED8;
-    --cream:   #E2ECF8;
-    --muted:   #5A7190;
-    --soft:    #8AA4C0;
-    --text:    #C8D8EC;
+    --bg:      #0d1208;
+    --bg2:     #131a0e;
+    --glass:   rgba(255,255,255,0.033);
+    --border:  rgba(74,222,128,0.14);
+    --accent:  #4ADE80;
+    --accent2: #86EFAC;
+    --dim:     #16A34A;
+    --cream:   #E8F5E2;
+    --muted:   #527048;
+    --soft:    #8DB87A;
+    --text:    #C6DEB8;
     --mono:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
     --sans:    'Segoe UI', system-ui, -apple-system, sans-serif;
   }
@@ -29,7 +28,7 @@
     color: var(--text);
     font-family: var(--sans);
     font-weight: 300;
-    font-size: 14px;
+    font-size: 15px;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -39,28 +38,28 @@
     content: '';
     position: fixed; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 0; opacity: 0.5;
+    pointer-events: none; z-index: 0; opacity: 0.45;
   }
 
   .glow-tl {
-    position: fixed; top: -100px; left: -80px;
-    width: 480px; height: 480px;
-    background: radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 70%);
+    position: fixed; top: -120px; left: -80px;
+    width: 520px; height: 520px;
+    background: radial-gradient(circle, rgba(74,222,128,0.06) 0%, transparent 70%);
     pointer-events: none; z-index: 0;
   }
   .glow-br {
     position: fixed; bottom: -80px; right: -60px;
-    width: 380px; height: 380px;
-    background: radial-gradient(circle, rgba(29,78,216,0.06) 0%, transparent 70%);
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(22,163,74,0.05) 0%, transparent 70%);
     pointer-events: none; z-index: 0;
   }
 
   /* ── LAYOUT ── */
   .page {
     position: relative; z-index: 1;
-    max-width: 900px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 44px 24px 60px;
+    padding: 44px 40px 64px;
   }
 
   /* ── HEADER ── */
@@ -76,7 +75,7 @@
   }
 
   .name {
-    font-size: clamp(40px, 7vw, 66px);
+    font-size: clamp(44px, 6vw, 72px);
     font-weight: 300;
     line-height: 1;
     color: var(--cream);
@@ -88,23 +87,23 @@
   }
   .title-line {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--accent);
     margin-top: 10px;
-    opacity: 0.85;
+    opacity: 0.8;
   }
 
   .contacts {
     text-align: right;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     flex-shrink: 0;
   }
   .contact-item {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
     letter-spacing: 0.3px;
   }
@@ -118,12 +117,12 @@
   /* ── GRID ── */
   .grid {
     display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 28px;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
     align-items: start;
   }
-  .col-main { display: flex; flex-direction: column; gap: 24px; }
-  .col-side  { display: flex; flex-direction: column; gap: 24px; }
+  .col-main { display: flex; flex-direction: column; gap: 26px; }
+  .col-side  { display: flex; flex-direction: column; gap: 26px; }
 
   /* ── SECTION ── */
   .section { animation: fadeUp 0.6s ease both; }
@@ -152,7 +151,7 @@
     background: var(--glass);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 18px 20px;
+    padding: 20px 22px;
     position: relative;
     overflow: hidden;
   }
@@ -160,11 +159,11 @@
     content: '';
     position: absolute; top: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(59,130,246,0.28), transparent);
+    background: linear-gradient(to right, transparent, rgba(74,222,128,0.25), transparent);
   }
 
   /* ── ABOUT ── */
-  .about-text { font-size: 14px; line-height: 1.75; color: var(--text); }
+  .about-text { font-size: 15px; line-height: 1.75; color: var(--text); }
 
   /* ── JOB HEADER ── */
   .job-head {
@@ -175,7 +174,7 @@
     gap: 12px;
   }
   .job-title {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--cream);
   }
@@ -186,46 +185,46 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--accent);
-    background: rgba(59,130,246,0.1);
-    border: 1px solid rgba(59,130,246,0.2);
+    background: rgba(74,222,128,0.08);
+    border: 1px solid rgba(74,222,128,0.2);
     border-radius: 4px;
     padding: 2px 8px;
     white-space: nowrap;
     flex-shrink: 0;
   }
   .job-org {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
     letter-spacing: 0.3px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
   /* ── TIMELINE ── */
-  .timeline { display: flex; flex-direction: column; gap: 12px; }
+  .timeline { display: flex; flex-direction: column; gap: 13px; }
   .tl-item {
     display: grid;
     grid-template-columns: 6px 1fr;
-    gap: 12px;
+    gap: 13px;
     align-items: start;
   }
   .tl-dot {
     width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--accent);
-    margin-top: 5px;
+    margin-top: 6px;
     flex-shrink: 0;
-    box-shadow: 0 0 7px rgba(59,130,246,0.45);
+    box-shadow: 0 0 7px rgba(74,222,128,0.45);
   }
   .tl-title {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--cream);
     margin-bottom: 2px;
   }
   .tl-sub {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
-    line-height: 1.55;
+    line-height: 1.6;
   }
 
   /* ── CHIPS ── */
@@ -233,43 +232,20 @@
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
-    margin-top: 14px;
+    margin-top: 16px;
   }
   .chip {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.07);
     border-radius: 20px;
-    padding: 3px 9px;
+    padding: 3px 10px;
   }
-
-  /* ── PROJECT TITLE ── */
-  .proj-title {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--cream);
-    margin-bottom: 4px;
-  }
-  .proj-desc {
-    font-size: 13px;
-    line-height: 1.65;
-    color: var(--text);
-    margin-bottom: 10px;
-  }
-  .proj-link {
-    font-size: 12px;
-    color: var(--accent2);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(96,165,250,0.25);
-    padding-bottom: 1px;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .proj-link:hover { color: var(--accent); border-color: var(--accent); }
 
   /* ── LAB GROUPS ── */
-  .lab-group { margin-bottom: 16px; }
+  .lab-group { margin-bottom: 18px; }
   .lab-group:last-child { margin-bottom: 0; }
   .lab-group-title {
     font-family: var(--mono);
@@ -277,75 +253,71 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--accent2);
-    opacity: 0.7;
-    margin-bottom: 8px;
+    opacity: 0.65;
+    margin-bottom: 10px;
   }
 
-  /* ── SKILL BARS ── */
-  .skill-groups { display: flex; flex-direction: column; gap: 0; }
+  /* ── SKILL DOTS ── */
+  .skill-groups { display: flex; flex-direction: column; }
   .skill-group-label {
     font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--muted);
-    margin-top: 14px;
-    margin-bottom: 8px;
+    margin-top: 16px;
+    margin-bottom: 10px;
   }
   .skill-group-label:first-child { margin-top: 0; }
 
-  .skill-row { display: flex; flex-direction: column; gap: 8px; }
+  .skill-row { display: flex; flex-direction: column; gap: 9px; }
   .skill-item {
-    display: grid;
-    grid-template-columns: 110px 1fr 34px;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 12px;
   }
   .skill-name {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--soft);
+    flex-shrink: 0;
+    min-width: 130px;
   }
-  .skill-track {
-    height: 2px;
-    background: rgba(255,255,255,0.07);
-    border-radius: 2px;
-    overflow: hidden;
+  .skill-dots {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
   }
-  .skill-fill {
-    height: 100%;
-    border-radius: 2px;
-    background: linear-gradient(to right, var(--dim), var(--accent));
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
   }
-  .skill-pct {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--muted);
-    text-align: right;
-  }
+  .dot.on  { background: var(--accent); box-shadow: 0 0 5px rgba(74,222,128,0.4); }
+  .dot.off { background: rgba(255,255,255,0.1); }
 
   /* ── LCHIPS ── */
-  .learning-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .learning-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
   .lchip {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
-    border: 1px dashed rgba(59,130,246,0.22);
+    border: 1px dashed rgba(74,222,128,0.2);
     border-radius: 20px;
-    padding: 3px 10px;
+    padding: 3px 11px;
   }
 
   /* ── TOOLS GRID ── */
   .tools-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+    gap: 7px;
   }
   .tool-item {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--soft);
-    padding: 6px 10px;
+    padding: 7px 11px;
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.055);
     border-radius: 7px;
@@ -370,17 +342,17 @@
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
   .lang-row:last-child { border-bottom: none; }
-  .lang-name { font-size: 13px; color: var(--soft); }
+  .lang-name { font-size: 14px; color: var(--soft); }
   .lang-level {
     font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--accent);
-    background: rgba(59,130,246,0.08);
-    border: 1px solid rgba(59,130,246,0.15);
+    background: rgba(74,222,128,0.08);
+    border: 1px solid rgba(74,222,128,0.15);
     border-radius: 4px;
-    padding: 2px 7px;
+    padding: 2px 8px;
   }
 
   /* ── AVAIL ── */
@@ -388,8 +360,8 @@
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    padding: 7px 0;
-    font-size: 13px;
+    padding: 8px 0;
+    font-size: 14px;
     color: var(--text);
     border-bottom: 1px solid rgba(255,255,255,0.05);
     line-height: 1.5;
@@ -399,11 +371,11 @@
 
   /* ── INFO BLOCK ── */
   .info-block {
-    background: rgba(59,130,246,0.05);
-    border: 1px solid rgba(59,130,246,0.14);
+    background: rgba(74,222,128,0.04);
+    border: 1px solid rgba(74,222,128,0.12);
     border-radius: 7px;
     padding: 10px 13px;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
     line-height: 1.6;
     margin-top: 12px;
@@ -413,7 +385,7 @@
   .divider {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--border), transparent);
-    margin: 10px 0;
+    margin: 12px 0;
   }
 
   /* ── ANIMATIONS ── */
@@ -433,30 +405,26 @@
 
   /* ── PRINT ── */
   @media print {
-    body { background: #fff; color: #111; font-size: 12px; }
+    body { background: #fff; color: #111; font-size: 13px; }
     .glow-tl, .glow-br, body::before { display: none; }
-    .card {
-      background: #f5f8ff;
-      border-color: #ccd4e0;
-      box-shadow: none;
-    }
+    .card { background: #f4faf0; border-color: #bdd6b0; box-shadow: none; }
     .card::before { display: none; }
     .name { color: #111; }
-    .name em { color: #1D4ED8; }
-    .title-line, .section-label, .skill-name, .tool-item, .chip,
-    .lang-level, .lchip { color: #333; }
-    .about-text, .tl-sub, .proj-desc { color: #222; }
-    .tl-title, .proj-title, .job-title, .job-org { color: #111; }
-    .skill-fill { background: #1D4ED8; }
-    .page { padding: 16px; }
-    .grid { gap: 18px; }
+    .name em { color: #16A34A; }
+    .title-line { color: #16A34A; }
+    .tl-title, .job-title { color: #111; }
+    .tl-sub, .about-text { color: #333; }
+    .dot.on { background: #16A34A; box-shadow: none; }
+    .dot.off { background: #ddd; }
+    .page { padding: 16px 20px; }
     @page { margin: 12mm 14mm; }
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 780px) {
     .grid { grid-template-columns: 1fr; }
     .header { grid-template-columns: 1fr; }
     .contacts { text-align: left; }
+    .page { padding: 28px 18px 48px; }
   }
 </style>
 </head>
@@ -492,7 +460,7 @@
         <div class="card">
           <p class="about-text">
             Системный администратор с ~4 годами опыта в муниципальной IT-инфраструктуре — единственный специалист на организацию из 9 подразделений. Зоны ответственности: сети MikroTik, парк рабочих станций, IP-видеонаблюдение, внутренние сервисы, документация и закупки.<br><br>
-            Параллельно развиваю home-lab: Proxmox + LXC + Docker, WireGuard, OpenWrt, Home Assistant, Raspberry Pi, IoT на ESP32. Пишу под свои задачи — Flask, Bash, JavaScript. Ищу позицию системного администратора с реальными задачами и возможностью роста.
+            Параллельно развиваю home-lab: Proxmox, LXC, Docker, WireGuard, OpenWrt, Home Assistant, Raspberry Pi, IoT на ESP32. Пишу под свои задачи — Flask, Bash, JavaScript. Ищу позицию системного администратора с реальными задачами и возможностью роста.
           </p>
         </div>
       </div>
@@ -526,7 +494,7 @@
               <div class="tl-dot"></div>
               <div>
                 <div class="tl-title">Парк рабочих станций (10–25 ПК)</div>
-                <div class="tl-sub">Установка и настройка Windows, офисного ПО, антивирусной защиты. Диагностика и ремонт аппаратных и программных неисправностей. Обслуживание принтеров, сканеров. L1/L2-поддержка пользователей</div>
+                <div class="tl-sub">Установка и настройка Windows, офисного ПО, антивирусной защиты. Диагностика и устранение аппаратных и программных неисправностей. Обслуживание принтеров и сканеров. L1/L2-поддержка пользователей</div>
               </div>
             </div>
             <div class="tl-item">
@@ -575,15 +543,15 @@
               <div class="tl-item">
                 <div class="tl-dot"></div>
                 <div>
-                  <div class="tl-title">Proxmox VE на мини-ПК (Intel N3160)</div>
-                  <div class="tl-sub">Разобрался с нюансами железа до уровня DDR3 vs DDR3L при апгрейде RAM. Хостит Home Assistant и LXC-контейнеры</div>
+                  <div class="tl-title">Proxmox VE</div>
+                  <div class="tl-sub">Хостит Home Assistant и LXC-контейнеры. Управление ресурсами, бэкапы, снапшоты</div>
                 </div>
               </div>
               <div class="tl-item">
                 <div class="tl-dot"></div>
                 <div>
                   <div class="tl-title">Home Assistant</div>
-                  <div class="tl-sub">Мониторинг 3D-принтера Creality K1 Max с автоматизациями, Lovelace-дашборд. Интеграция Яндекс.Станции (Алиса) с агентом-диалогом на YandexGPT. Геотрекинг iPhone, автоматизации</div>
+                  <div class="tl-sub">Мониторинг 3D-принтера Creality K1 Max с автоматизациями, Lovelace-дашборд. Интеграция Яндекс.Станции (Алиса) с агентом-диалогом на YandexGPT. Геотрекинг, автоматизации</div>
                 </div>
               </div>
               <div class="tl-item">
@@ -604,8 +572,8 @@
               <div class="tl-item">
                 <div class="tl-dot"></div>
                 <div>
-                  <div class="tl-title">OpenWrt + MikroTik (двухуровневая сеть)</div>
-                  <div class="tl-sub">OpenWrt как dumb AP (10.0.0.199) за основным MikroTik (10.0.0.1/24). WireGuard-клиент на OpenWrt: firewall-зоны, маршрутизация. DPI-байпас zapret для YouTube/ограниченных сервисов</div>
+                  <div class="tl-title">OpenWrt + MikroTik — двухуровневая сеть</div>
+                  <div class="tl-sub">OpenWrt как dumb AP (10.0.0.199) за основным MikroTik (10.0.0.1/24). WireGuard-клиент на OpenWrt: firewall-зоны, маршрутизация. DPI-байпас zapret для обхода блокировок</div>
                 </div>
               </div>
             </div>
@@ -627,7 +595,7 @@
                 <div class="tl-dot"></div>
                 <div>
                   <div class="tl-title">Нестандартное решение</div>
-                  <div class="tl-sub">USB-порты аппаратно повреждены — организовал удалённый доступ через RealVNC без физической клавиатуры/мыши</div>
+                  <div class="tl-sub">USB-порты аппаратно повреждены — организовал удалённый доступ через RealVNC без физической клавиатуры</div>
                 </div>
               </div>
             </div>
@@ -641,7 +609,6 @@
             <span class="chip">OpenWrt</span>
             <span class="chip">Pi-hole</span>
             <span class="chip">Home Assistant</span>
-            <span class="chip">MikroTik</span>
           </div>
         </div>
       </div>
@@ -655,21 +622,14 @@
               <div class="tl-dot"></div>
               <div>
                 <div class="tl-title">Flask — внутренний IT-инструмент МИБС</div>
-                <div class="tl-sub">Учёт инцидентов, задачи, аутентификация, CSV-экспорт. Работает в продакшне</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div>
-                <div class="tl-title">React + Vite — Producer Control Center</div>
-                <div class="tl-sub">Дашборд на hub.layerp.ru: недельный календарь, GitHub как бэкенд для данных, CI/CD через GitHub Actions + Telegram-бот для уведомлений</div>
+                <div class="tl-sub">Учёт инцидентов и задач, аутентификация, CSV-экспорт. Работает в продакшне</div>
               </div>
             </div>
             <div class="tl-item">
               <div class="tl-dot"></div>
               <div>
                 <div class="tl-title">IoT / Embedded — ESP32-S3 и ESP8266</div>
-                <div class="tl-sub">VS Code + PlatformIO: телеметрия (BME280, SSD1306 OLED), WS2812B LED-матрицы, встроенный веб-сервер с JSON API + Fetch</div>
+                <div class="tl-sub">VS Code + PlatformIO: телеметрия (BME280, SSD1306 OLED), WS2812B LED-матрицы, встроенный веб-сервер с JSON API</div>
               </div>
             </div>
             <div class="tl-item">
@@ -684,8 +644,7 @@
             <span class="chip">Python / Flask</span>
             <span class="chip">Bash</span>
             <span class="chip">JavaScript</span>
-            <span class="chip">React</span>
-            <span class="chip">GitHub Actions</span>
+            <span class="chip">Git / GitHub</span>
             <span class="chip">ESP32</span>
             <span class="chip">PlatformIO</span>
           </div>
@@ -701,87 +660,95 @@
       <div class="section">
         <div class="section-label">Навыки</div>
         <div class="card">
-          <div class="skill-group-label">Сети и безопасность</div>
+
+          <div class="skill-group-label">Сети</div>
           <div class="skill-row">
             <div class="skill-item">
               <span class="skill-name">MikroTik</span>
-              <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
-              <span class="skill-pct">85%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span class="skill-name">TCP/IP · LAN</span>
-              <div class="skill-track"><div class="skill-fill" style="width:82%"></div></div>
-              <span class="skill-pct">82%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span class="skill-name">OpenWrt</span>
-              <div class="skill-track"><div class="skill-fill" style="width:78%"></div></div>
-              <span class="skill-pct">78%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
-              <span class="skill-name">Firewall / VLAN</span>
-              <div class="skill-track"><div class="skill-fill" style="width:68%"></div></div>
-              <span class="skill-pct">68%</span>
+              <span class="skill-name">Firewall · VLAN</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span class="skill-name">WireGuard VPN</span>
-              <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
-              <span class="skill-pct">65%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
           </div>
 
-          <div class="divider" style="margin:12px 0 6px;"></div>
-          <div class="skill-group-label">Серверы и виртуализация</div>
+          <div class="divider" style="margin:14px 0 6px;"></div>
+          <div class="skill-group-label">Серверы и системы</div>
           <div class="skill-row">
             <div class="skill-item">
               <span class="skill-name">Linux (Arch)</span>
-              <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
-              <span class="skill-pct">80%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
-              <span class="skill-name">Windows / AD</span>
-              <div class="skill-track"><div class="skill-fill" style="width:72%"></div></div>
-              <span class="skill-pct">72%</span>
+              <span class="skill-name">Windows · AD</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span class="skill-name">Proxmox VE</span>
-              <div class="skill-track"><div class="skill-fill" style="width:68%"></div></div>
-              <span class="skill-pct">68%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span class="skill-name">Docker · LXC</span>
-              <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
-              <span class="skill-pct">65%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
           </div>
 
-          <div class="divider" style="margin:12px 0 6px;"></div>
-          <div class="skill-group-label">Автоматизация</div>
+          <div class="divider" style="margin:14px 0 6px;"></div>
+          <div class="skill-group-label">Скрипты и код</div>
           <div class="skill-row">
             <div class="skill-item">
               <span class="skill-name">Bash / shell</span>
-              <div class="skill-track"><div class="skill-fill" style="width:68%"></div></div>
-              <span class="skill-pct">68%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span class="skill-name">Python · Flask</span>
-              <div class="skill-track"><div class="skill-fill" style="width:52%"></div></div>
-              <span class="skill-pct">52%</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
             <div class="skill-item">
-              <span class="skill-name">Git · GH Actions</span>
-              <div class="skill-track"><div class="skill-fill" style="width:58%"></div></div>
-              <span class="skill-pct">58%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">JavaScript</span>
-              <div class="skill-track"><div class="skill-fill" style="width:55%"></div></div>
-              <span class="skill-pct">55%</span>
+              <span class="skill-name">Git · GitHub</span>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div>
+              </div>
             </div>
           </div>
 
-          <div class="divider" style="margin:12px 0 6px;"></div>
-          <div class="skill-group-label">В процессе</div>
+          <div class="divider" style="margin:14px 0 6px;"></div>
+          <div class="skill-group-label">Изучаю</div>
           <div class="learning-chips">
             <span class="lchip">Ansible</span>
             <span class="lchip">Zabbix</span>
@@ -845,7 +812,7 @@
         </div>
       </div>
 
-      <!-- SOFT SKILLS -->
+      <!-- КАК РАБОТАЮ -->
       <div class="section">
         <div class="section-label">Как работаю</div>
         <div class="card">
@@ -861,14 +828,14 @@
               <div class="tl-dot"></div>
               <div>
                 <div class="tl-title">Hands-on подход</div>
-                <div class="tl-sub">Сначала разбираюсь сам → Google → AI. Не останавливаюсь пока не понял</div>
+                <div class="tl-sub">Сначала разбираюсь сам → Google → AI. Не останавливаюсь, пока не понял</div>
               </div>
             </div>
             <div class="tl-item">
               <div class="tl-dot"></div>
               <div>
                 <div class="tl-title">Коммуникация</div>
-                <div class="tl-sub">Писал инструкции для нетехнического персонала, формулирую задачи письменно — Telegram/Discord</div>
+                <div class="tl-sub">Писал инструкции для нетехнического персонала, формулирую задачи письменно</div>
               </div>
             </div>
           </div>
