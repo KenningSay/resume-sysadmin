@@ -434,6 +434,14 @@
     .glow-tl, .glow-br, body::before { display: none; }
     .page { padding: 16px 20px; }
     @page { margin: 10mm 12mm; }
+
+    .card            { break-inside: avoid; page-break-inside: avoid; }
+    .tl-item         { break-inside: avoid; page-break-inside: avoid; }
+    .lab-group       { break-inside: avoid; page-break-inside: avoid; }
+    .skill-row       { break-inside: avoid; page-break-inside: avoid; }
+    .lang-row        { break-inside: avoid; page-break-inside: avoid; }
+    .avail-row       { break-inside: avoid; page-break-inside: avoid; }
+    .section-label   { break-after: avoid;  page-break-after: avoid;  }
   }
 
   @media (max-width: 780px) {
